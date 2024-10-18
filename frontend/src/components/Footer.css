@@ -1,44 +1,72 @@
-/* src/components/Footer.css */
+/* Footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap');
+
 footer {
-    background-color: #333;
-    color: white;
-    padding: 2rem;
-    text-align: center;
+    padding: 40px 20px; /* Add some padding */
+    text-align: center; /* Center align text */
+    background: rgb(98,144,198);
+    background: linear-gradient(90deg, rgba(98,144,198,1) 0%, rgba(21,132,161,1) 36%, rgba(178,197,212,1) 86%);
+    position: relative; /* Ensure proper positioning for child elements */
+}
+.contact-card {
+    background-color: #F5EFEB; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    margin: 20px auto; /* Center the card */
+    max-width: 400px; /* Set maximum width */
 }
 
-form {
-    margin-bottom: 1.5rem;
+.contact-card form {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
 }
 
-form input, form textarea {
-    display: block;
-    margin: 0.5rem auto;
-    padding: 0.5rem;
-    width: 80%;
-    max-width: 400px;
-    border: none;
-    border-radius: 4px;
+.message-label {
+    font-family: 'Lora', serif; /* Apply Lora font to the message label */
+    font-size: 16px; /* Optional: Adjust font size */
+    margin-bottom: 5px; /* Space between label and textarea */
 }
 
-button {
-    background-color: #575757;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.contact-card input,
+.contact-card textarea {
+    margin: 10px 0; /* Space between inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%; /* Full width */
 }
 
-button:hover {
-    background-color: #777;
+.contact-card button {
+    padding: 10px; /* Padding for button */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.contact-card button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+.socials {
+    margin: 20px 0; /* Space around social links */
 }
 
 .socials a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
+    margin: 0 10px; /* Space between icons */
+    font-size: 24px; /* Icon size */
+    color: #333; /* Icon color */
+    transition: color 0.3s; /* Smooth transition on hover */
 }
 
 .socials a:hover {
-    text-decoration: underline;
+    color: #F5EFEB; /* Change color on hover */
+}
+
+.copyright {
+    margin-top: 20px; /* Space above copyright */
+    font-size: 16px; /* Font size for copyright */
+    color: #333; /* Color for copyright text */
 }

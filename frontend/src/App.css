@@ -1,4 +1,6 @@
 /* Global CSS Reset */
+/*or change to darker color? old color was C8D9E6*/
+
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +13,15 @@ a, button {
   cursor: pointer; /* Change cursor to pointer for better UX */
 }
 
-/* General Styles */
+/* Ensure the full height for html, body, and root */
+html, body, #root {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: #f0f0f0;
+  background-color: #C8D9E6; /* This allows the particles to be visible */
 }
 
 /* Using EB Garamond for headings */

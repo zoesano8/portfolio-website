@@ -1,11 +1,12 @@
+// src/App.js
 import React from 'react';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import './App.css';  // Importing styles from App.css
-
-import Navbar from './components/Navbar';  // Import the updated Navbar component
-import About from './components/About';    // About Me Section
-import Resume from './components/Resume';  // Resume Section
-import Projects from './components/Projects';  // Projects Section
-import Footer from './components/Footer';  // Footer with contact form
+import Navbar from './components/Navbar';
+import About from './components/About';
+import Resume from './components/Resume';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 function App() {
   return (

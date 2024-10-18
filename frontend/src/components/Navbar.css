@@ -4,7 +4,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #567C8D;
+}
+
+.navbar h1 {
+    color: #FFFFFF;
+    font-size: auto;
+    font-style: bold;
+    word-spacing: normal;
+
 }
 
 /* Navbar links container */
@@ -13,7 +21,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    gap: 30px; /* Space between navbar links */
+    gap: 2px; /* Space between navbar links */
 }
 
 /* Hide the links by default on mobile screens */
@@ -25,7 +33,7 @@
 .navbar-links a {
     text-decoration: none;
     font-family: 'Lora', serif;
-    color: #333;
+    color: #FFFFFF;
     font-size: 18px;
     padding: 10px 20px; /* Add horizontal and vertical padding */
     display: block; /* Ensure each link takes full width */
@@ -40,7 +48,7 @@
 
 /* Navbar link hover styles */
 .navbar-links a:hover {
-    color: #007BFF; /* Change text color on hover */
+    font-size: larger; /* Change text color on hover */
     background: transparent; /* Ensure no background change */
 }
 

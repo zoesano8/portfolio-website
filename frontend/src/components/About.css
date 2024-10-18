@@ -1,11 +1,12 @@
 /* About.css */
 .about-section {
+    height: 100vh; /* Full height of the viewport */
     padding: 40px 20px; /* Add more padding for better spacing */
     text-align: center; /* Center align text */
-    background-color: #f9f9f9; /* Light background for contrast */
-    border-radius: 8px; /* Rounded corners for the section */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px auto; /* Center the section with automatic margins */
+    /* Remove background color */
+    /* Remove border radius */
+    /* Remove box shadow */
+    margin: 40px auto; /* Center the section with automatic margins */
     max-width: 800px; /* Set a maximum width for larger screens */
 }
 
@@ -18,7 +19,40 @@
 }
 
 .about-section p {
-    font-size: 1.1rem; /* Slightly larger text for better readability */
+    font-size: 1.3rem; /* Slightly larger text for better readability */
     line-height: 1.6; /* Increase line spacing */
     color: #333; /* Dark text color for contrast */
+}
+
+.typewriter {
+    font-family: 'Lora', serif;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 2rem;
+    border-right: 2px solid; /* Border to simulate cursor while typing */
+}
+
+/* Blinking effect for the cursor */
+.blinking::after {
+    content: '|';
+    position: absolute;
+    right: 0;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+/* Keyframe for the blinking cursor */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Hide the border-right (cursor) after 5 seconds */
+.typewriter:not(.blinking) {
+    border-right: none; /* Remove the blinking cursor line */
 }

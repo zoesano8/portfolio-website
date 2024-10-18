@@ -1,10 +1,9 @@
 import React from 'react';
-import './Projects.css';  // Import the CSS file
+import './Projects.css';  // Import the CSS file <h2>My Projects</h2>
 
 const Projects = () => {
   return (
     <div className="projects-container">
-      <h2>My Projects</h2>
 
       {/* Project 1 */}
       <div className="project-card">
