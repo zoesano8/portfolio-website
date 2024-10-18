@@ -1,0 +1,86 @@
+/* Basic Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Navbar links container */
+.navbar-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px; /* Space between navbar links */
+}
+
+/* Hide the links by default on mobile screens */
+.navbar-links.open {
+    display: block; /* Show links when hamburger is open */
+}
+
+/* Navbar link styles */
+.navbar-links a {
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 20px; /* Add horizontal and vertical padding */
+    display: block; /* Ensure each link takes full width */
+    margin: 5px 0; /* Add vertical margin between items */
+    outline: none; /* Remove outline */
+}
+
+/* Remove outline on focus */
+.navbar-links a:focus {
+    outline: none; /* Prevent outline on focus */
+}
+
+/* Navbar link hover styles */
+.navbar-links a:hover {
+    color: #007BFF; /* Change text color on hover */
+    background: transparent; /* Ensure no background change */
+}
+
+/* Hamburger menu styles for mobile */
+.navbar-hamburger {
+    display: none; /* Hide the hamburger icon on larger screens */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.hamburger-icon {
+    font-size: 28px; /* Size of the hamburger icon */
+}
+
+/* Media Query: Show the hamburger on small screens and hide the links */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide the navbar links by default on small screens */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%;
+        text-align: center;
+        background-color: #f4f4f4; /* Background for the dropdown */
+        position: absolute; /* Position the dropdown */
+        top: 60px; /* Adjust position as needed */
+        left: 0;
+        z-index: 1; /* Ensure it appears above other elements */
+    }
+
+    .navbar-links.open {
+        display: block; /* Show the links when in open state */
+    }
+
+    .navbar-hamburger {
+        display: block; /* Show the hamburger icon on small screens */
+    }
+
+    .navbar-links li {
+        margin: 15px 0; /* Space out items vertically */
+    }
+
+    .navbar-logo h1 {
+        font-size: 24px; /* Adjust logo size for mobile */
+    }
+}

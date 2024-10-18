@@ -1,0 +1,44 @@
+/* src/components/Footer.css */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 1.5rem;
+}
+
+form input, form textarea {
+    display: block;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 400px;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #575757;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+.socials a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    text-decoration: underline;
+}

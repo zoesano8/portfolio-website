@@ -1,0 +1,40 @@
+.projects-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .project-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .project-card p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .project-card a {
+    font-size: 1.1em;
+    color: #0d00ff;
+    text-decoration: none;
+  }
+
+  .project-card a:hover {
+    text-decoration: underline;
+  }
