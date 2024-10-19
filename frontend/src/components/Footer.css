@@ -4,18 +4,43 @@
 footer {
     padding: 40px 20px; /* Add some padding */
     text-align: center; /* Center align text */
-    background: rgb(98,144,198);
     background: linear-gradient(90deg, rgba(98,144,198,1) 0%, rgba(21,132,161,1) 36%, rgba(178,197,212,1) 86%);
     position: relative; /* Ensure proper positioning for child elements */
+    margin: auto;
 }
+
+/* New container for contact cards */
+.contact-cards-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-around; /* Space the contact cards evenly */
+    flex-wrap: wrap; /* Allow the cards to wrap on smaller screens */
+}
+
 .contact-card {
-    background-color: #F5EFEB; /* Card background color */
+    background-color: #eee6e1; /* Card background color */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     padding: 20px; /* Padding inside the card */
-    margin: 20px auto; /* Center the card */
+    margin: 10px; /* Margin around each card */
     max-width: 400px; /* Set maximum width */
+    flex: 1; /* Allow cards to grow and shrink based on available space */
+    min-width: 280px; /* Ensure a minimum width for responsiveness */
+    min-height: 200px;
+    text-align: center; /* Center content inside the card */
 }
+
+@media (max-width: 768px) {
+    .contact-cards-container {
+        flex-direction: column; /* Stack the cards vertically on small screens */
+    }
+
+    .contact-card {
+        max-width: 100%; /* Make the cards full-width on small screens */
+        margin: 10px auto; /* Center them vertically */
+    }
+}
+
+
 
 .contact-card form {
     display: flex;
@@ -38,12 +63,14 @@ footer {
 }
 
 .contact-card button {
-    padding: 10px; /* Padding for button */
-    background-color: #007BFF; /* Button color */
-    color: white; /* Text color */
-    border: none; /* No border */
+    text-decoration: none;
+    color: white; /* Text color for the buttons */
+    background-color: #007BFF; /* Button background color */
+    padding: 8px 16px; /* Reduced padding for less bulk */
     border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
+    margin: 5px 2px; /* Reduced space between buttons */
+    display: inline-block; /* Ensure they sit side by side */
+    border: none;
 }
 
 .contact-card button:hover {
@@ -70,3 +97,32 @@ footer {
     font-size: 16px; /* Font size for copyright */
     color: #333; /* Color for copyright text */
 }
+
+.contact-card .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.certification-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.certification-links li {
+    margin: 5px 0; /* Space between list items, adjust as needed */
+}
+
+.certification-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007BFF; /* Link color */
+    transition: color 0.3s; /* Smooth color transition on hover */
+    display: block; /* Make links fill the list item */
+    padding: 5px; /* Add padding for clickable area */
+    border-radius: 4px; /* Optional: rounded corners for the links */
+}
+
+.certification-links a:hover {
+    color: #0056b3; /* Darker shade on hover */
+    background-color: rgba(0, 123, 255, 0.1); /* Optional: background color on hover */
+}
+

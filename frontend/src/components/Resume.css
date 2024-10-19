@@ -1,26 +1,32 @@
 /* Resume.css */
 section {
-    padding: 20px;
     text-align: center;
+    margin-bottom: 10px;;
 }
 
 .resume-buttons {
     display: flex;
     flex-direction: column; /* Stack buttons vertically */
     align-items: center; /* Center the buttons */
-    margin-top: 15px;
 }
 
 .resume-button {
-    text-decoration: none;
-    color: white; /* Text color for the buttons */
+    display: inline-block; /* Treat buttons like inline blocks */
+    text-decoration: none; /* Remove text underline */
+    color: white; /* Text color */
     background-color: #007BFF; /* Button background color */
-    padding: 10px 20px; /* Padding for the buttons */
-    border-radius: 5px; /* Rounded corners */
-    margin: 5px 0; /* Space between buttons */
-    transition: background-color 0.3s; /* Transition effect */
+    padding: 10px; /* Padding around text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 1rem; /* Font size */
+    margin: 2px 0; /* Space between buttons */
+    min-width: 150px; /* Ensure both buttons have a minimum width */
+    text-align: center; /* Center the text */
 }
 
 .resume-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; /* Darker background on hover */
 }
+

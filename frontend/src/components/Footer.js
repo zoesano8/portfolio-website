@@ -1,5 +1,6 @@
 // src/components/Footer.js
 import React from 'react';
+import Resume from './Resume';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -7,6 +8,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
     return (
         <footer id="contact">
+            <div class="contact-cards-container">
             <div className="contact-card">
                 <h2>Contact Me</h2>
                 <p>If you have any questions or would like to collaborate, please leave your information and a message. I'll get back to you as soon as possible!</p>
@@ -24,6 +26,28 @@ const Footer = () => {
 
                     <button type="submit"><p>Send</p></button>
                 </form>
+            </div>
+
+            {/* Resume links */}
+            <div className="contact-card">
+                <h2>Resume</h2>
+                <p>View or download my resume below</p>
+                <span class="material-symbols-outlined">arrow_downward</span> <br />
+
+                <section id="resume">
+                    <Resume />
+                </section>
+                <section id="certifications">
+                    <h2>Certifications</h2>
+                    <ul class="certification-links">
+                        <li><a href="https://www.credly.com/badges/f060837a-7b52-46e7-b42b-3debb49ff6c2/linked_in_profile" target="_blank" rel="noreferrer">AWS Certified Cloud Practitioner</a></li>
+                        <li><a href="https://www.keysight.com/us/en/lib/resources/miscellaneous/industryready-student-listing--colorado-school-of-mines-2713007.html" target="_blank" rel="noreferrer">Keysight ADS</a></li>
+                        <li><a href="https://www.credly.com/users/zoe-sano" target="_blank" rel="noreferrer">Meta & Google Certifications</a></li>
+                    </ul>
+                </section>
+
+            </div>
+
             </div>
 
             {/* Social Links */}

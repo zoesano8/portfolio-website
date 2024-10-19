@@ -1,12 +1,10 @@
 /* About.css */
 .about-section {
-    height: 100vh; /* Full height of the viewport */
+    min-height: 65vh; /* Full height of the viewport but space to grow */
     padding: 40px 20px; /* Add more padding for better spacing */
     text-align: center; /* Center align text */
-    /* Remove background color */
-    /* Remove border radius */
-    /* Remove box shadow */
     margin: 40px auto; /* Center the section with automatic margins */
+    margin-bottom: 20px;
     max-width: 800px; /* Set a maximum width for larger screens */
 }
 

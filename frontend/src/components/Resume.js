@@ -5,8 +5,6 @@ import './Resume.css'; // Importing the CSS file for styles
 const Resume = () => {
     return (
         <section id="resume">
-            <h2>Resume</h2>
-            <p>You can view my resume or download it using the buttons below:</p>
 
             <div className="resume-buttons">
                 <a

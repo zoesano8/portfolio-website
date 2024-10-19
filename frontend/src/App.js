@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import './App.css';  // Importing styles from App.css
 import Navbar from './components/Navbar';
 import About from './components/About';
-import Resume from './components/Resume';
+import JobBanner from './components/JobBanner';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 
@@ -15,14 +15,17 @@ function App() {
       <Navbar />
 
       {/* About Me Section */}
-      <section id="about">
-        <About />
-      </section>
+      <div>
+        <section id="about">
+          <About />
+        </section>
+
+        {/* JobBanner */}
+        <JobBanner />
+
+      </div>
 
       {/* Resume Section */}
-      <section id="resume">
-        <Resume />
-      </section>
 
       {/* Projects Section */}
       <section id="projects">
