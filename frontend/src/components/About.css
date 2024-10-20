@@ -1,25 +1,33 @@
-/* About.css */
+.about-section-container {
+    position: relative; /* Ensure particles are positioned within this container */
+    width: 100%;
+    height: 70vh; /* Full height to ensure the particles fill the section */
+    background-color: transparent;
+}
+
+
 .about-section {
-    min-height: 65vh; /* Full height of the viewport but space to grow */
-    padding: 40px 20px; /* Add more padding for better spacing */
-    text-align: center; /* Center align text */
-    margin: 40px auto; /* Center the section with automatic margins */
-    margin-bottom: 20px;
-    max-width: 800px; /* Set a maximum width for larger screens */
+    position: relative;
+    z-index: 1; /* Ensure the content is on top of particles */
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: transparent;
 }
 
 .headshot {
-    border-radius: 50%; /* Makes the image round */
-    width: 150px; /* Fixed size for the image */
-    height: 150px; /* Fixed size for the image */
-    margin: 20px 0; /* Space around the image */
-    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+    object-fit: cover;
 }
 
 .about-section p {
-    font-size: 1.3rem; /* Slightly larger text for better readability */
-    line-height: 1.6; /* Increase line spacing */
-    color: #333; /* Dark text color for contrast */
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #333;
 }
 
 .typewriter {
@@ -29,10 +37,9 @@
     white-space: nowrap;
     overflow: hidden;
     font-size: 2rem;
-    border-right: 2px solid; /* Border to simulate cursor while typing */
+    border-right: 2px solid;
 }
 
-/* Blinking effect for the cursor */
 .blinking::after {
     content: '|';
     position: absolute;
@@ -40,17 +47,11 @@
     animation: blink 0.7s steps(1) infinite;
 }
 
-/* Keyframe for the blinking cursor */
 @keyframes blink {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
-/* Hide the border-right (cursor) after 5 seconds */
 .typewriter:not(.blinking) {
-    border-right: none; /* Remove the blinking cursor line */
+    border-right: none;
 }

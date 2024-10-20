@@ -18,10 +18,16 @@ html, body, #root {
   height: 100%;
 }
 
-body {
+body, html {
   margin: 0;
   padding: 0;
   background-color: #C8D9E6; /* This allows the particles to be visible */
+}
+
+.content {
+  position: relative; /* Allow stacking context for absolute children */
+  z-index: 1; /* Ensure content is above the canvas */
+  padding: 20px;
 }
 
 /* Using EB Garamond for headings */
