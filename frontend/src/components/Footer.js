@@ -30,15 +30,17 @@ const Footer = () => {
 
             {/* Resume links */}
             <div className="contact-card">
-                <h2>Resume</h2>
-                <p>View or download my resume below</p>
+                <h2>Professional Documents</h2>
+                <p>View my resume and college transcript below</p>
                 <span class="material-symbols-outlined">arrow_downward</span> <br />
 
                 <section id="resume">
                     <Resume />
+                    <br />
                 </section>
                 <section id="certifications">
-                    <h2>Certifications</h2>
+                    <p>List of Certifications</p>
+                    <span class="material-symbols-outlined">arrow_downward</span> <br />
                     <ul class="certification-links">
                         <li><a href="https://www.credly.com/badges/f060837a-7b52-46e7-b42b-3debb49ff6c2/linked_in_profile" target="_blank" rel="noreferrer">AWS Certified Cloud Practitioner</a></li>
                         <li><a href="https://www.keysight.com/us/en/lib/resources/miscellaneous/industryready-student-listing--colorado-school-of-mines-2713007.html" target="_blank" rel="noreferrer">Keysight ADS</a></li>

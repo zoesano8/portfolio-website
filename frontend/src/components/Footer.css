@@ -126,3 +126,11 @@ footer {
     background-color: rgba(0, 123, 255, 0.1); /* Optional: background color on hover */
 }
 
+#certifications p {
+    font-size: large;
+}
+
+
+.contact-card p {
+    font-size: large;
+}

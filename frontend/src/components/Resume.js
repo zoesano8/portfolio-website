@@ -17,11 +17,13 @@ const Resume = () => {
                 </a>
                 <br />
                 <a
-                    href="/Zoe_Sano_Resume.pdf" // Same link for downloading
-                    download="Zoe_Sano_Resume.pdf" // Specifies the download attribute
+                    href="/Zoe_Sano_Transcript.pdf" // Same link for downloading
+                    //download="Zoe_Sano_Resume.pdf" // Specifies the download attribute, decided to change this to transcript instead
+                    target="_blank" // Opens the resume in a new tab
+                    rel="noopener noreferrer"
                     className="resume-button" // Adding class for styling
                 >
-                    Download Resume
+                    View Transcript
                 </a>
             </div>
         </section>
