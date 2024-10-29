@@ -31,7 +31,7 @@ const Footer = () => {
             {/* Resume links */}
             <div className="contact-card">
                 <h2>Professional Documents</h2>
-                <p>View my resume and college transcript below</p>
+                <p>View my resume and college transcript here</p>
                 <span class="material-symbols-outlined">arrow_downward</span> <br />
 
                 <section id="resume">
@@ -42,9 +42,9 @@ const Footer = () => {
                     <p>List of Certifications</p>
                     <span class="material-symbols-outlined">arrow_downward</span> <br />
                     <ul class="certification-links">
-                        <li><a href="https://www.credly.com/badges/f060837a-7b52-46e7-b42b-3debb49ff6c2/linked_in_profile" target="_blank" rel="noreferrer">AWS Certified Cloud Practitioner</a></li>
-                        <li><a href="https://www.keysight.com/us/en/lib/resources/miscellaneous/industryready-student-listing--colorado-school-of-mines-2713007.html" target="_blank" rel="noreferrer">Keysight ADS</a></li>
-                        <li><a href="https://www.credly.com/users/zoe-sano" target="_blank" rel="noreferrer">Meta & Google Certifications</a></li>
+                        <li><a href="https://www.credly.com/badges/f060837a-7b52-46e7-b42b-3debb49ff6c2/linked_in_profile" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></li>
+                        <li><a href="https://www.keysight.com/us/en/lib/resources/miscellaneous/industryready-student-listing--colorado-school-of-mines-2713007.html" target="_blank" rel="noopener noreferrer">Keysight ADS</a></li>
+                        <li><a href="https://www.credly.com/users/zoe-sano" target="_blank" rel="noopener noreferrer">Meta & Google Certifications</a></li>
                     </ul>
                 </section>
 

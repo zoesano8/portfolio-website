@@ -1,35 +1,49 @@
+// src/components/Projects.js
 import React from 'react';
-import './Projects.css';  // Import the CSS file <h2>My Projects</h2>
+import './Projects.css';
 
 const Projects = () => {
+  const projectLinks = [
+    {
+      id: 1,
+      title: "Project 1: Remote RF Spectrum Monitoring with SDR and AWS",
+      description: "This project showcases my ability to set up an SDR for remote RF spectrum monitoring, collecting data, and analyzing it with AWS cloud technologies.",
+      link: "/project-details/1"
+    },
+    {
+      id: 2,
+      title: "Project 2: Low Cost Direction Finding System using RTL-SDR",
+      description: "This project showcases my ability to create a simple direction finding system with a hobby DR to locate sources of RF signals.",
+      link: "/project-details/2"
+    },
+    {
+      id: 3,
+      title: "Project 3: Low Noise Amplifier",
+      description: "This project is from my Active RF & Microwaves course from college.",
+      link: "/project-details/3"
+    },
+  ];
+
   return (
     <div>
-      <h2 id="project-title">Projects</h2>
-
-      <div className="projects-container">
-
-        {/* Project 1 */}
-        <div className="project-card">
-          <h3>Project 1: RF System Design</h3>
-          <p>This project showcases my ability to design and analyze RF systems using cloud-based simulations and AWS services for technical tasks.</p>
-          <a href="https://example.com" target="_blank" rel="noopener noreferrer">View Project
-          </a>
+      <section id="projects">
+        <h2 id="project-title">Projects</h2>
+        <div className="projects-container">
+          {projectLinks.map((project) => (
+            <div className="project-card" key={project.id}>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <br />
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer">
+                View Project
+              </a>
+            </div>
+          ))}
         </div>
-
-        {/* Project 2 */}
-        <div className="project-card">
-          <h3>Project 2: Cloud-based Simulations</h3>
-          <p>Here, I demonstrated proficiency in running cloud simulations using AWS EC2, S3, and other cloud services for real-time RF analysis.</p>
-          <a href="https://example.com" target="_blank" rel="noopener noreferrer">View Project</a>
-        </div>
-
-        {/* Project 3 */}
-        <div className="project-card">
-          <h3>Project 3: AWS Integration</h3>
-          <p>This project highlights the integration of AWS Lambda and API Gateway for serverless backend development to support RF engineering applications.</p>
-          <a href="https://example.com" target="_blank" rel="noopener noreferrer">View Project</a>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
