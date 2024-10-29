@@ -41,7 +41,7 @@ const ProjectDetails = () => {
         "Our final land pattern layout, which illustrates how the amplifier will be physically arranged on a circuit board."
       ],
       pdf: '/LNA_Zoe_Sano.pdf',
-      video: '/Low Noise Amplifier.mp4'
+      video: '/LowNoiseAmplifier.mp4'
     },
   };
 
