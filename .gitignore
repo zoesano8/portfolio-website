@@ -1,3 +1,14 @@
+# Ignore video files in the public folder
 frontend/public/LowNoiseAmplifier.mp4
+frontend/public/CoupledLineCoupler.mp4
+frontend/public/Zoe_Sano_Resume.pdf
+frontend/public/Zoe_Sano_Transcript.pdf
 
+# Ignore macOS system files
 .DS_Store
+
+# Ignore the virtual environment directory
+backend/venv/
+
+#Ignore credentials file
+backend/.env

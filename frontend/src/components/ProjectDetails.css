@@ -1,32 +1,119 @@
-/* src/components/ProjectDetails.css */
+/* ProjectDetails.css */
+
+/* General Layout */
+.project-details {
+  margin: 30px 30px;
+  color: #333;
+}
+
+.project-details h1,
+.project-details p {
+  text-align: center;
+  margin: auto;
+}
+
+.project-details h1 {
+  font-size: 2.5em;
+  color: #1e2a47;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.project-details p,
+.project-details ul {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.project-details .details,
+.project-details .details2 {
+  margin-left: 20px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.project-details .details li,
+.project-details .details2 li {
+  list-style-type: square;
+  margin-bottom: 10px;
+}
+
+/* Image Section */
 .project-images {
-    display: flex;
-    flex-direction: column; /* Stack images vertically, use row for horizontal */
-    gap: 10px; /* Space between images */
-  }
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap if needed */
+  justify-content: center; /* Center the images horizontally */
+  gap: 15px; /* Space between images */
+}
 
-  .project-images img {
-    max-width: 100%; /* Responsive images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: rounded corners */
-  }
+.project-images .image-container {
+  width: calc(60% - 30px); /* Adjust width as needed */
+  text-align: center;
+  margin: 15px;
+}
 
-  .projectDetails {
-    margin: 30px 20px;
-  }
-  .projectDetails h1,
-  .projectDetails p {
-    text-align: center;
-    margin: auto;
-  }
+.project-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-images .image-description {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+  align-items: center;
+}
 
 
-  .projectDetails h2 {
-    text-align: left;
-    margin-left: auto;
-  }
+/* PDF Viewer */
+.project-pdf {
+  margin-top: 40px;
+}
 
-  .project-pdf, .project-video {
+.project-pdf h2 {
+  font-size: 1.8em;
+  color: #1e2a47;
+}
+
+.project-pdf iframe {
+  border-radius: 8px;
+}
+
+/* Video Section */
+.project-video {
+  margin-top: 40px;
+}
+
+.project-video h2 {
+  font-size: 1.8em;
+  color: #1e2a47;
+}
+
+.project-video video {
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+/* Text Styling */
+.details {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.details2 {
+  margin-top: 30px;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.project-details br {
+  margin-bottom: 10px;
+}
+
+.project-pdf, .project-video {
   margin: 20px; /* Adjust as needed */
   background-color: rgba(255, 255, 255, 0.8); /* Optional: adds a slight background color */
   padding: 10px; /* Optional: adds padding for better appearance */
@@ -37,7 +124,4 @@
   border-radius: 8px;
 }
 
-.details {
-  text-align: left;
-  margin-left: 40px;
-}
+

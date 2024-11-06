@@ -10,6 +10,7 @@ import Projects from './components/Projects';
 import ProjectDetails from './components/ProjectDetails';
 import Footer from './components/Footer';
 
+
 function App() {
   const location = useLocation();
 

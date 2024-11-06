@@ -39,9 +39,14 @@ const About = () => {
                 <div>
                     <img src="/headshot.jpg" alt="Zoe Sano" className="headshot" />
                     <p>
-                        I'm an Electrical Engineer with diverse interests. <br />
-                        My portfolio features projects in RF engineering, cloud technologies, full-stack web development, and university coursework. <br />
-                        Feel free to explore my portfolio and reach out with any questions or opportunities!
+                        <i>I'm an Electrical Engineer with a passion for blending technology and design.</i>
+                        <br />
+                        My portfolio spans projects in RF engineering, from hands-on university work to hobbyist radio applications.
+                        <br />
+                        I've also integrated AWS cloud technologies, full-stack web development, and user experience design to showcase my multifaceted skill set and versatility.
+                        <br />
+                        <br />
+                        Browse my portfolio to see how I bring my engineering skills to life across a range of projects. Please feel free to reach out with any questions or opportunities!
                     </p>
                 </div>
             </section>
