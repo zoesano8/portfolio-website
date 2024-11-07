@@ -28,7 +28,7 @@ const Footer = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent default form submission
         try {
-            const response = await fetch('http://127.0.0.1:8000/contact/', { // Replace with your actual backend URL
+            const response = await fetch('https://zoesano.click/contact/', { // Replace with your actual backend URL for aws
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
