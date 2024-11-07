@@ -7,13 +7,13 @@ const Projects = () => {
     {
       id: 1,
       title: "Project 1: Low Noise Amplifier",
-      description: "Learn about the design of a low-noise amplifier (LNA) engineered to amplify ultra-weak signals while preserving signal clarity. This project combines advanced materials and circuit design techniques to minimize noise, ensuring cleaner, more accurate signal amplification ideal for sensitive RF applications.",
+      description: "Learn about the design of a low-noise amplifier (LNA) engineered to amplify ultra-weak signals while preserving signal clarity. This project combines advanced materials and circuit design techniques to minimize noise, ensuring cleaner, more accurate signal amplification which is ideal for sensitive RF applications.",
       link: "/project-details/1"
     },
     {
       id: 2,
       title: "Project 2: Coupled Line Coupler",
-      description: "Discover the inner workings of a Coupled Line Coupler—a powerful passive RF component designed to manage signal flow, reduce noise, and improve performance in electronic systems. See how it’s used in RF meters to deliver precision in signal monitoring and control.",
+      description: "Discover the inner workings of a Coupled Line Coupler—a powerful passive RF component designed to manage signal flow, reduce noise, and improve performance in electronic systems. See how it's used in RF meters to deliver precision in signal monitoring and control.",
       link: "/project-details/2"
     },
     {
@@ -28,12 +28,12 @@ const Projects = () => {
       description: "This hobby project showcases my ability to set up an SDR for receiving audio from a local FM radio station and conducting RF spectrum monitoring.",
       link: "/project-details/4"
     },
-    {
+    /*{
       id: 5,
       title: "Project 5: Low Cost Direction Finding System using RTL-SDR",
       description: "This project showcases my ability to create a simple direction finding system with a hobby DR to locate sources of RF signals.",
       link: "/project-details/5"
-    },
+    },*/
   ];
 
   return (

@@ -15,7 +15,7 @@ const ShootingStars = () => {
                 shootingStars.push({
                     x: Math.random() * canvas.width, // Random start position
                     y: Math.random() * canvas.height * 0.5, // Start from the upper half of the canvas
-                    speed: Math.random() + 0.5, // Slower speed
+                    speed: Math.random() + 0.4, // Slower speed
                     active: false,
                     opacity: 1,
                 });
@@ -54,7 +54,7 @@ const ShootingStars = () => {
                     }
                 } else {
                     star.x += star.speed; // Move diagonally to the right
-                    star.y += star.speed * 0.4; // Move downwards more slowly
+                    star.y += star.speed * 0.3; // Move downwards more slowly
                     star.opacity -= 0.01; // Decrease opacity for fade-out effect
 
                     // Reset shooting star when it goes off screen or faded out

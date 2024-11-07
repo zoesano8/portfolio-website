@@ -23,7 +23,7 @@ const ProjectDetails = () => {
         "Our final land pattern layout, which illustrates how the amplifier will be physically arranged on a circuit board"
       ],
       pdf: '/LNA_Zoe_Sano.pdf',
-      video: '/LowNoiseAmplifier.mp4'
+      video: 'https://my-portfolio-media.s3.us-east-2.amazonaws.com/LowNoiseAmplifier.mp4'
     },
 
     2: {
@@ -42,7 +42,7 @@ const ProjectDetails = () => {
         "Results and analysis of S-parameters to verify expected coupling and performance"
       ],
       pdf: '/CLC.pdf',
-      video: '/CoupledLineCoupler.mp4'
+      video: 'https://my-portfolio-media.s3.us-east-2.amazonaws.com/CoupledLineCoupler.mp4'
     },
 
     3: {
@@ -72,27 +72,28 @@ const ProjectDetails = () => {
       Let's discuss the hardware setup for the project, the flowgraph created in gnuradio-companion, and the results of the project in a short video demonstration.
       `,
       bulletPoints: [
-        "Environment: Raspberry Pi 3 (Model B), loaded with Raspbian OS, check & update the system with 'sudo apt-get update/upgrade', install rtl-sdr and GNUradio, a free & open source software development toolkit that provides signal processing blocks to implement SDR and signal processing systems) in the terminal, to your RPI or computer",
-        "Hardware: Computer (RPI3B), Keyboard & Mouse (mine not depicted as my RPI has Bluetooth capability), HDMI cable to see via external monitor, Audio speaker connected via audio jack (again mine is a bluetooth speaker), RTL-SDR dongle connected via USB-A port, and telescopic antennas set up as vertical dipole antenna mounted to tripod (mount antenna outside or against top level floor window with minimal interference)",
-        "Flowgraph: Run gnuradio-companion (GRC), which GRC is a graphical tool for creating GNUradio signal flowgraphs using blocks",
-        "The flowgraph includes using the RTL-SDR to capture the radio station signal and then follows steps to decode the FM broadcasts. Additional Frequency and Waterfall sinks are taken to visualize the radio frequency spectrum.",
-        "Breakdown (start to end): RTL-SDR Source - for capturing the radio frequency signals -> Low Pass Filter (LPF) - filters out unwanted frequencies to isolate the FM signal -> WBFM Receive - demodulates the FM signal to extract audio -> Rational Resampler - adjusts the sample rate for compatibility with the audio sink -> Audio Sink - outputs the decoded audio -> Frequency, Waterfall, and Time Sinks - visualize the signal spectrum and frequency changes in real time",
-        "Results: Stable FM audio output showing how a little RTL-SDR ($44 for dongle and antenna kit on Amazon) plus free software enables one to capture, filter, and decode FM broadcasts, plus much more!",
+          `Environment: Raspberry Pi 3 (Model B), loaded with Raspbian OS, check & update the system with 'sudo apt-get update/upgrade', install rtl-sdr and GNUradio, a free & open source software development toolkit that provides signal processing blocks to implement SDR and signal processing systems) in the terminal, to your RPI or computer. Please be mindful of the OS system you are using and if you are getting started with the RPI, brushing up on a couple linux commands always helps.`,
+          `Hardware: Computer (RPI3B), Keyboard & Mouse (mine not depicted as my RPI has Bluetooth capability), HDMI cable to see via external monitor, Audio speaker connected via audio jack (again mine is a bluetooth speaker), RTL-SDR dongle (V3 R860 RTL2832U) connected via USB-A port, and telescopic antennas set up as vertical dipole antenna mounted to tripod (mount antenna outside or against top level floor window with minimal interference) connected to RTL-STR via a coaxial cable.`,
+          `Flowgraph: Run gnuradio-companion (GRC), which GRC is a graphical tool for creating GNUradio signal flowgraphs using blocks`,
+          `The flowgraph includes using the RTL-SDR to capture the radio station signal (I tuned into 93.3 FM an Alternative Radio station located in Wheatridge, CO) and then follows steps to decode the FM broadcasts. Additional Frequency and Waterfall sinks are taken to visualize the radio frequency spectrum.`,
+          `Breakdown (start to end): RTL-SDR Source - for capturing the radio frequency signals -> Low Pass Filter (LPF) - filters out unwanted frequencies to isolate the FM signal -> WBFM Receive - demodulates the FM signal to extract audio -> Rational Resampler - adjusts the sample rate for compatibility with the audio sink -> Audio Sink - outputs the decoded audio -> Frequency, Waterfall, and Time Sinks - visualize the signal spectrum and frequency changes in real time`,
+          `Results: Stable FM audio output showing how a little RTL-SDR plus free software enables one to capture, filter, and decode FM broadcasts.  There is so much more it can do!`,
       ],
        images: [
         { src: '/setup2.png', caption: 'Hardware Setup with Raspberry Pi and RTL-SDR Dongle' },
         { src: '/Flowgraph.png', caption: 'GNU Radio Flowgraph for FM Radio Receiver' },
-        //{ src: '/lpf.png', caption: 'Low Pass Filter Implementation in the Flowgraph' },
-        //{ src: '/waterfall.png', caption: 'Waterfall Plot of FM Signal Spectrum' }
+        { src: '/lpf.png', caption: 'Low Pass Filter Implementation in the Flowgraph' },
+        { src: '/waterfall.png', caption: 'Waterfall Plot of FM Signal Spectrum' }
       ],
         bulletPoints2: [
         "Spectrum Monitoring - the frequency and waterfall sinks provide real time visuals of signal strength and frequency distribution, enabling spectrum analysis and observation of radio activity across various bandwidths",
         "FM Demodulation - filters and demodulators to isolate and decode FM radio channels, allowing audio playback at 48 kHz (standard for audio and video) through the Audio Sink",
         "Sample Rate Adjustment - rational resampler adjusts the sample rate via interpolation/decimation to ensure compatibility between different stages of processing",
         ],
+        video: 'https://my-portfolio-media.s3.us-east-2.amazonaws.com/FM_Radio.mp4'
     },
 
-    5: {
+    /*5: {
       title: "Low Cost Direction Finding System using RTL-SDR",
       description: "This project showcases my ability to create a simple direction finding system with a hobby DR to locate sources of RF signals.",
       details: "In particular, this project is useful for applications in radar, communications, and electronic warfare.",
@@ -100,7 +101,7 @@ const ProjectDetails = () => {
         '/images/cloud-simulations-1.jpg',
         '/images/cloud-simulations-2.jpg'
       ]
-    },
+    },*/
   };
 
   const project = projects[id]; // Get the project data based on the ID
@@ -115,6 +116,7 @@ const ProjectDetails = () => {
       <h1>{project.title}</h1>
       <br />
       <p>{project.description}</p>
+      <br />
       <p className='details'>{project.details.split('\n').map((line, index) => (
         <React.Fragment key={index}>
           {line}
@@ -148,7 +150,7 @@ const ProjectDetails = () => {
       {/* Render the second set of bullet points after images */}
       {project.bulletPoints2 && project.bulletPoints2.length > 0 && (
         <ul className="details2">
-          <h2>Project Features</h2>
+          <h3>Project Features</h3>
           {project.bulletPoints2.map((point, index) => (
             <li key={index}>{point}</li>
           ))}
@@ -180,6 +182,7 @@ const ProjectDetails = () => {
           </video>
         </div>
       )}
+      <br />
     </div>
 
       );
